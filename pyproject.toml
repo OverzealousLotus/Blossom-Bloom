@@ -1,0 +1,6 @@
+# Preferences for Ruff Linting
+[tool.ruff]
+line-length = 120
+
+# Enabled Error Codes
+select = ["D", "E", "F", "I", "W", "UP"]
