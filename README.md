@@ -1,6 +1,6 @@
 ---
 
-<h1 style="text-align:center;">Blossom-Bloom</h1>
+# Blossom-Bloom
 
 This repository contains notes/examples I have procured during my journey learning various coding languages.
 
