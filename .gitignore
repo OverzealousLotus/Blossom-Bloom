@@ -1,0 +1,4 @@
+# Directories to ignore.
+.vscode
+.idea
+.ruff_cache
