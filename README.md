@@ -1,5 +1,5 @@
 ---
-[![Generic badge](https://img.shields.io/badge/<Version>-<0.0.1>-<purple>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Version-0.0.1-<blueviolet>.svg)](https://shields.io/)
 
 # Blossom-Bloom
 
