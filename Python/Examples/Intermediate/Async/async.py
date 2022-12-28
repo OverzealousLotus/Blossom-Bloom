@@ -2,6 +2,11 @@
 from asyncio import create_task, run, sleep
 from typing import Any
 
+__all__ = ["main", "secondary", "teritary"]
+__version__ = "0.1"
+__author__ = "Overzealous Lotus"
+__license__ = "GPL-3"
+
 
 # Syncronous Programming is the concept of moving from line-to-line in order.
 # Asyncronous Programming is jumping to different lines during certain tasks.

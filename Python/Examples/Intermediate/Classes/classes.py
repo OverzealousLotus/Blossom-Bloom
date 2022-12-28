@@ -4,6 +4,7 @@ from typing import Self
 __all__ = ["main_classing"]
 __version__ = "0.2"
 __author__ = "Overzealous Lotus"
+__license__ = "GPL-3"
 
 
 def main_classing() -> None:

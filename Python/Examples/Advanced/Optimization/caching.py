@@ -5,6 +5,7 @@ from timeit import timeit
 __all__ = ["fibonacci_cache", "fibonacci_lru", "main"]
 __version__ = "0.1"
 __author__ = "Overzealous Lotus"
+__license__ = "GPL-3"
 
 
 # Caching allows us to remember previous operations, which are stored in a datatable-
