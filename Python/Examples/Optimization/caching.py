@@ -30,7 +30,7 @@ def fibonacci_lru(november: int) -> int:
     return fibonacci_lru(november - 1) + fibonacci_lru(november - 2)
 
 
-def main():
+def main() -> None:
     """Primary executor of our program."""
     for index in range(100):
         print("Non-LRU: ", index, fibonacci_lru(index))

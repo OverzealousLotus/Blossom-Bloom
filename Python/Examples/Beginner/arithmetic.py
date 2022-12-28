@@ -1,4 +1,4 @@
-"""Math functions"""
+"""Mathematics in Python."""
 
 __all__ = ["main"]
 __version__ = "0.1"
@@ -7,10 +7,9 @@ __author__ = "Overzealous Lotus"
 import math  # Importing math
 
 
-def main():
+def main() -> None:
     """Function used to run entire program."""
-
-    pie: float = 3.13
+    pie: float = 3.14
     xanther: int = 1
     yankee: int = 2
     zulu: int = 3
@@ -24,22 +23,22 @@ def main():
     # Rounds downwards
     print(math.floor(pie))
 
-    # Notifies Python how far a value is from zero
+    # Notifies Python how far a value is from zero.
     print(abs(pie))
 
-    # Raises a value to a given power
+    # Raises a value to a given power.
     print(pow(pie, 2))
 
-    # Square roots a given value
+    # Square roots a given value.
     print(math.sqrt(pie))
 
-    # Cube roots a given valsue
+    # Cube roots a given value.
     print(math.cbrt(pie))
 
-    # Searches for the highest value
+    # Searches for the highest value.
     print(max(xanther, yankee, zulu))
 
-    # Searches for the lowest value
+    # Searches for the lowest value.
     print(min(xanther, yankee, zulu))
 
 

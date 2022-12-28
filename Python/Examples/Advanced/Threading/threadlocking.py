@@ -17,7 +17,7 @@ shop_items: dict[str, str] = {
 }
 
 
-def fruit_sell():
+def fruit_sell() -> None:
     """Where our fruit is sold."""
     global credits, threadlock, open
     if open == "YES":
@@ -40,24 +40,24 @@ def fruit_sell():
         print("")
 
 
-def shop():
+def shop() -> None:
     """Where user can purchase items."""
-    global credits, threadlock, open, USER_CHOICE, user_items, shop_items
+    global credits, threadlock, open, user_choice, user_items, shop_items
     while True:
         if open == "YES":
             threadlock.acquire()
 
-            USER_CHOICE = str(input(" \nPlease choose from these items:")).upper()
+            user_choice = str(input(" \nPlease choose from these items:")).upper()
             print("Otherwise, type anything to cancel.")
 
-            if USER_CHOICE == "UMBRELLA":
+            if user_choice == "UMBRELLA":
                 user_items.append("Umbrella")
                 shop_items.pop("Umbrella")
                 credits -= 10
-            elif USER_CHOICE == "CANDY":
+            elif user_choice == "CANDY":
                 user_items.append("Candy")
                 shop_items.pop("Candy")
-            elif USER_CHOICE == "WHEELS":
+            elif user_choice == "WHEELS":
                 user_items.append("Wheels")
                 shop_items.pop("Wheels")
         else:

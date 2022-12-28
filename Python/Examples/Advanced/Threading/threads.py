@@ -4,7 +4,7 @@ from threading import Thread
 from time import sleep
 
 
-def fruit_gen():
+def fruit_gen() -> None:
     """Fruit generation."""
     while True:
         our_fruit = choice([
@@ -27,7 +27,7 @@ def fruit_gen():
         print(f"One of our {our_fruit}s has been sold!")
 
 
-def income():
+def income() -> None:
     """Our income gain."""
     increase: int = 1
     while True:
@@ -36,7 +36,7 @@ def income():
         print(f"You have gained ₼{increase} from selling fruits.")
 
 
-def time():
+def time() -> None:
     """Our time passing."""
     days: int = 0
     while True:

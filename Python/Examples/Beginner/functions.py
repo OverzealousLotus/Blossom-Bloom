@@ -5,11 +5,8 @@ __version__ = "0.1"
 __author__ = "Overzealous Lotus"
 
 
-def main():
+def main() -> None:
     """Primary function of our program."""
-
-    # pylint: disable=unnecessary-lambda
-
     # To define functions in Python, we use the "def" keyword, then our function name.
     # Below, we can see a few things going on in our function. In parenthesis, they list-
     # -expected values to be inputed when this function is called. Without them, our func-
@@ -18,7 +15,6 @@ def main():
             xanther: int | float,
             yankee: int | float) -> int | float:
         """Always add Docstrings to your functions."""
-
         return xanther + yankee  # The "return" keyword returns our value.
 
     print(addition(24.5, 24.5))

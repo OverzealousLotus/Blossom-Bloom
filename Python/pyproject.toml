@@ -3,4 +3,12 @@
 line-length = 120
 
 # Enabled Error Codes
-select = ["D", "E", "F", "I", "W", "UP"]
+select = [
+    "ANN", 
+    "D", 
+    "E", 
+    "F", 
+    "I", 
+    "N", 
+    "UP", 
+    "W"]

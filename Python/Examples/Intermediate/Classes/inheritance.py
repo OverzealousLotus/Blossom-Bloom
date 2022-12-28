@@ -1,54 +1,52 @@
-"Object Oriented Programming"
-from typing import Any
+"""Inheritance in Python."""
+from typing import Any, Self
+
 __all__ = ["main"]
 __version__ = "0.1"
 __author__ = "Overzealous Lotus"
 
 
-def main():
+def main() -> None:
     """Function to run our program."""
     class Employee():
-        "Our main class"
+        """Our main class."""
 
-        def __init__(self, name: str, age: int, salary: int):
-            "Defines our class attributes"
-
+        def __init__(self: Self, name: str, age: int, salary: int) -> None:
+            """Defines our class attributes."""
             self.name = name
             self.age = age
             self.salary = salary
 
-        def work(self):  # All Subclasses of Employee() can use this method
-            "Tells our user an Employee is working, but is overridden"
+        def work(self: Self) -> None:  # All Subclasses of Employee() can use this method
+            """Tells our user an Employee is working, but is overridden."""
             print(f"{self.name} is working...")
 
     class SoftwareEngineer(Employee):
-        "One of our subclasses, inheriting Employee"
+        """One of our subclasses, inheriting Employee."""
 
-        def __init__(self, name: str, age: int, salary: int, level: str):
-            "Inherits attributes from Employee using super()"
-
-            # super() lets us inherit all attributes from our Subclass"s parent
+        def __init__(self: Self, name: str, age: int, salary: int, level: str) -> None:
+            """Inherits attributes from Employee using super()."""
+            # "super()"" lets us inherit all attributes from our Subclass"s parent
             super().__init__(name, age, salary)
             self.level = level  # This attribute is exclusive to our SE Subclass
 
-        def work(self):
-            "Tells our user an Employee is working"
+        def work(self: Self) -> None:
+            """Tells our user an Employee is working."""
             print(f"{self.name} is coding...")
 
-        def debug(self):  # Exclusive method to only our SE Subclass.
-            "Tells us if our Software Engineer is debugging"
-
+        def debug(self: Self) -> None:  # Exclusive method to only our SE Subclass.
+            """Tells us if our Software Engineer is debugging."""
             print(f"{self.name} is debugging...")
 
     class Designer(Employee):
-        "Another subclass, inheriting Employee attributes"
+        """Another subclass, inheriting Employee attributes."""
 
-        def work(self):
-            "Tells our user an Employee is working"
+        def work(self: Self) -> None:
+            """Tells our user an Employee is working."""
             print(f"{self.name} is designing...")
 
-        def draw(self):  # Exclusive method to only our Designer Subclass
-            "Notifies us of our Designer drawing"
+        def draw(self: Self) -> None:  # Exclusive method to only our Designer Subclass
+            """Notifies us of our Designer drawing."""
             print(f"{self.name} is drawing...")
 
     # While DE and SE do both inherit Employee"s attributes, they have differences
@@ -68,8 +66,8 @@ def main():
         SoftwareEngineer("Lisa", 30, 9000, "Senior"),
         Designer("Frank", 27, 7000)]
 
-    def mote_workforce(workforce: list[Any]):
-        "Grabs our listed instances, and orders them to work"
+    def mote_workforce(workforce: list[Any]) -> None:
+        """Grabs our listed instances, and orders them to work."""
         for employee in workforce:
             employee.work()
 

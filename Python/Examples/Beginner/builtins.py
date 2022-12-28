@@ -1,13 +1,12 @@
-"Built-in functions for Python"
+"""Built-in functions for Python."""
 
 __all__ = ["main"]
 __version__ = "0.1"
 __author__ = "Overzealous Lotus"
 
 
-def main():
+def main() -> None:
     """Function to run our program."""
-
     # Input()
 
     # We ask the user their name.

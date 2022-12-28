@@ -6,20 +6,20 @@ __version__ = "0.2"
 __author__ = "Overzealous Lotus"
 
 
-def main_if():
+def main_if() -> None:
     """ Function to run entire program."""
 
-    # if statement
+    # <===| If |===>
 
     age: int = int(input("How old are you?:"))
 
-    if age >= 100:
+    if age >= 100:  # If statements ask if something is true.
         print("You are an elderly.")
-    elif age >= 18:   # An if statement, asking a question. Only runs if true.
+    elif age >= 18:   # Elif statements only ask if something is true, if the previous is false.
         print("Wow! You are an adult!")
-    elif age < 0:  # If its parent statement(s) are false, then this will run.
+    elif age < 0:  # Second Elif statement.
         print("You have not been born yet. Weirdo.")
-    else:  # Asks if its parent statements are all false. Only runs if true.
+    else:  # If everything fails, Else is a fallback.
         print("You are an adolescent.")
 
     temp: int = int(input("What is the temperature outside?: "))
@@ -32,43 +32,44 @@ def main_if():
     elif temp is False:
         print("Wow! The temperature is exactly zero!")
 
-    # "is" simply asks if something is something
+    # "is" simply asks if something is something.
 
-    # Matching
+    # <===| Matching |===>
 
-    # Alternatively to elif, we can use match cause statements
-
-    match age:
+    # Alternatively, Match statements are shorthand syntax for Elif blocks.
+    # They can save us space as developers, since programs can get big fast.
+    match age:  # Matches different values for "age"
         case 100 if age >= 100:
             print("Stop being old.")
         case 18 if age >= 18:
             print("You are LEGALLY an adult.")
         case 0 if age < 0:
             print("Okay, time-traveler.")
-        case _:  # _ is a placeholder
+        case _:  # _ is a placeholder. This case is a fallback.
             print("I don't know what that means.")
 
 
-def main_looping():
+def main_looping() -> None:
     """Second function to run program. ( Loops )"""
 
     name: str = ""
 
+    # <===| While |===>
     while not name:  # Freezes program until input is given
         name = str(input("What is your name?: "))
 
     print(f"Hello, {name}")
 
-    # for loop
+    # <===| For |===>
 
-    for i in range(10):  # Here, we tell Python to count up to 10.
-        print(i + 1)
+    for index in range(10):  # Here, we tell Python to count up to 10.
+        print(index + 1)
 
-    for i in range(50, 100 + 1, 2):  # Python will count from 50, to 100.
-        print(i)
+    for index in range(50, 100 + 1, 2):  # Python will count from 50, to 100.
+        print(index)
 
-    for i in "Joshua Salas":  # Prints every char in our name
-        print(i)
+    for index in "Joshua Salas":  # Prints every char in our name
+        print(index)
 
     for seconds in range(10, 0, -1):  # How about we count backwards now?
         print(seconds)
@@ -76,10 +77,10 @@ def main_looping():
     print("Happy new year.")
 
 
-def main_control():
+def main_control() -> None:
     """Tertiary function to run program. ( Loop Control )"""
 
-    # Nesting Loops/Statements
+    # <===| Nesting |===>
 
     rows: int = int(input("How many rows?: "))
     columns: int = int(input("How many columns?: "))
@@ -90,7 +91,7 @@ def main_control():
             print(symbol, end="")  # Stops from printing to new line
         print()
 
-    # Controlling Loops
+    # <===| Loop Control |===>
 
     while True:
         name = str(input("Enter your name: "))
