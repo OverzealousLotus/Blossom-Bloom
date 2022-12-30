@@ -1,6 +1,6 @@
 ---
 ## Rust Notes
-Background: Before I committed my Rust notes to Github, something terrible happened.
+Before I committed my Rust notes to Github, something terrible happened.
 I believe I deleted every single file while trying to organize everything into one Git repo.
 I still do not know how, but what matters is that I had re-written every single file.
 All of these files, are not the originals, but will still provide someone out there help, I hope.
