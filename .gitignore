@@ -1,4 +1,9 @@
 # Directories to ignore.
+
+# Python
 .vscode/
 .idea/
 .ruff_cache/
+
+# Rust
+Rust/Examples/Basics/target

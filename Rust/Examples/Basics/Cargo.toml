@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "variables",
+    "oop",
+    "arithmetic",
+    "control_flow",
+    "libraries",
+    "types"
+]
+
+
+[workspace.package]
+version = "0.0.1"
+authors = ["OverzealousLotus"]
+description = "Basics of Rust."
+license = "GPL-3"
+
+
+[profile.dev]
+strip = true
+opt-level = "z"
+lto = true

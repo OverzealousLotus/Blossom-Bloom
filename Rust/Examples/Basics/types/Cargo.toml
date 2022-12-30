@@ -1,0 +1,21 @@
+[package]
+name = "types"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "numerals"
+path = "src/numerals.rs"
+
+[[bin]]
+name = "options"
+path = "src/options.rs"
+
+[[bin]]
+name = "boxes"
+path = "src/boxes.rs"
+
+
+[dependencies]
