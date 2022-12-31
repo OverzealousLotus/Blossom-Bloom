@@ -1,6 +1,6 @@
 ---
-[![Generic badge](https://img.shields.io/badge/Release-v0.0.1b3-blueviolet.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/License-GPL3-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Release-v0.0.1b4-blueviolet.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/License-GPL3.0-blue.svg)](https://shields.io/)
 
 # Blossom-Bloom
 
