@@ -3,7 +3,7 @@
 __all__ = ["main"]
 __version__ = "0.1"
 __author__ = "Overzealous Lotus"
-__license__ = "GPL-3"
+__license__ = "GPL-3.0"
 
 
 def main() -> None:

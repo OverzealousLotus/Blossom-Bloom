@@ -4,7 +4,7 @@ from time import sleep
 __all__ = ["main_if", "main_looping", "main_control"]
 __version__ = "0.2"
 __author__ = "Overzealous Lotus"
-__license__ = "GPL-3"
+__license__ = "GPL-3.0"
 
 
 def main_if() -> None:

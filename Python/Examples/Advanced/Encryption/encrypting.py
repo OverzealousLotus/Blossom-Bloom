@@ -9,12 +9,12 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 __all__ = ["main"]
 __version__ = "0.1"
 __author__ = "Overzealous Lotus"
-__license__ = "GPL-3"
+__license__ = "GPL-3.0"
 
 
 def main() -> None:
     """Main function of our program."""
-    pwd_provided = 'password'  # This is input in the form of a string
+    pwd_provided = "password"  # This is input in the form of a string
     pwd = pwd_provided.encode()  # Convert password to bytes
 
     salt = urandom(32)  # Always use Salt during Encryption.

@@ -4,69 +4,80 @@ from threading import Lock, Thread
 from time import sleep
 from typing import Any
 
-credits: int = 0
-threadlock = Lock()
-open: str = "No"
-user_items: list[str] = []
-shop_items: dict[str, str] = {
-    "Umbrella": "10 credits",
-
-    "Candy": "30 credits",
-
-    "Wheels": "50 credits"
-}
+__all__ = ["main"]
+__version__ = "0.1"
+__author__ = "Overzealous Lotus"
+__license__ = "GPL-3.0"
 
 
-def fruit_sell() -> None:
-    """Where our fruit is sold."""
-    global credits, threadlock, open
-    if open == "YES":
-        threadlock.release()
-    else:
-        threadlock.acquire()
+def main() -> None:
+    """Main function of our program."""
+    money: int = 0
+    threadlock = Lock()
+    enter: str = "No"
+    inventory: list[str] = []
+    merch: dict[str, str] = {
+        "Umbrella": "$10",
 
-    while True:
-        sleep(1)
-        fruit: Any = choice([
-            "Pineapple",
-            "Grape",
-            "Kiwi",
-            "Strawberry",
-            "Dragonfruit",
-            "Durian"
-        ])
-        credits += randint(3, 10)
-        print(f"{fruit} sold at our market! credits:{credits}\r", end="", flush=True)
-        print("")
+        "Candy": "$30",
+
+        "Wheels": "$50"
+    }
 
 
-def shop() -> None:
-    """Where user can purchase items."""
-    global credits, threadlock, open, user_choice, user_items, shop_items
-    while True:
-        if open == "YES":
+    def fruit_sell() -> None:
+        """Where our fruit is sold."""
+        nonlocal money, threadlock, enter
+        if enter == "YES":
+            threadlock.release()
+        else:
             threadlock.acquire()
 
-            user_choice = str(input(" \nPlease choose from these items:")).upper()
-            print("Otherwise, type anything to cancel.")
-
-            if user_choice == "UMBRELLA":
-                user_items.append("Umbrella")
-                shop_items.pop("Umbrella")
-                credits -= 10
-            elif user_choice == "CANDY":
-                user_items.append("Candy")
-                shop_items.pop("Candy")
-            elif user_choice == "WHEELS":
-                user_items.append("Wheels")
-                shop_items.pop("Wheels")
-        else:
-            threadlock.release()
-        open = str(input("Type \"Yes\" at anytime to open the shop.")).upper()
+        while True:
+            sleep(1)
+            fruit: Any = choice([
+                "Pineapple",
+                "Grape",
+                "Kiwi",
+                "Strawberry",
+                "Dragonfruit",
+                "Durian"
+            ])
+            money += randint(3, 10)
+            print(f"{fruit} sold at our market! money:{money}\r", end="", flush=True)
+            print("")
 
 
-thread_one = Thread(target=fruit_sell)
-thread_two = Thread(target=shop)
+    def shop() -> None:
+        """Where user can purchase items."""
+        nonlocal money, threadlock, enter, inventory, merch
+        while True:
+            if enter == "YES":
+                threadlock.acquire()
 
-thread_one.start()
-thread_two.start()
+                user_choice = str(input(" \nPlease choose from these items:")).upper()
+                print("Otherwise, type anything to cancel.")
+
+                if user_choice == "UMBRELLA":
+                    inventory.append("Umbrella")
+                    merch.pop("Umbrella")
+                    money -= 10
+                elif user_choice == "CANDY":
+                    inventory.append("Candy")
+                    merch.pop("Candy")
+                elif user_choice == "WHEELS":
+                    inventory.append("Wheels")
+                    merch.pop("Wheels")
+            else:
+                threadlock.release()
+            enter = str(input("Type 'Yes' at anytime to enter the shop.")).upper()
+
+
+    thread_one = Thread(target=fruit_sell)
+    thread_two = Thread(target=shop)
+
+    thread_one.start()
+    thread_two.start()
+
+if __name__ == "__main__":
+    main()

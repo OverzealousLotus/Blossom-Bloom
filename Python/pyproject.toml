@@ -2,13 +2,37 @@
 [tool.ruff]
 line-length = 120
 
-# Enabled Error Codes
+# Error Code configuration.
 select = [
-    "ANN", 
-    "D", 
-    "E", 
-    "F", 
-    "I", 
-    "N", 
-    "UP", 
-    "W"]
+    "A",  # flake8-builtins
+    "ANN",  # flake8-annotations
+    "ARG",  # flake8-unused-arguments
+    "C90",  # mccabe 
+    "D",  # pydocstyle
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "I",  # isort
+    "ICN",  # flake8-import-conventions
+    "N",  # pep8-naming
+    "PLC",  # pylint
+    "PLE",  # pylint
+    "PLR",  # pylint
+    "PLW",  # pylint
+    "Q",  # flake8-quotes
+    "UP",  # pyupgrade
+    "W"  # pycodestyle
+]
+
+
+# Extended Error Code configuration.
+extend-ignore = [
+    "D107",
+    "D203",  # Conflict with D211
+    "D212",
+    "D213",
+    "D402",
+    "D413",
+    "D415",
+    "D416",
+    "D417",
+]
