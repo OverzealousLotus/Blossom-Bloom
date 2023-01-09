@@ -1,8 +1,8 @@
+# **Rust**
 ---
 
-# Rust
-
 ## **Special Thanks**
+---
 1. **Content Creators**
     - [Let's Get Rusty](https://piped.kavin.rocks/channel/UCSp-OaMpsO8K0KkOqyBl7_w)
 
@@ -12,7 +12,8 @@
     - [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
 
 
-### Foreword
+### **Foreword**
+---
 Before I committed my Rust notes to Github, something terrible happened.
 I believe I deleted every single file while trying to organize everything into one Git repo.
 I still do not know how, but what matters is that I had re-written every single file.
@@ -25,11 +26,10 @@ However, I perservered, and quite enjoy its syntax by this point, and have come 
 
 
 ### **TODO**
+---
 - Add Closures to Functions
 - Add explanation for References.
 - Actually add an explanation for Unions...
 - Change/Add comments.
 - Rustceanize where necessary.
 - Create my own examples for certain files.
-
----
