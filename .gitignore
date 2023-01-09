@@ -4,6 +4,7 @@
 .vscode/
 .idea/
 .ruff_cache/
+*/__pycache__/
 
 # Rust
 Rust/Examples/Basics/target
