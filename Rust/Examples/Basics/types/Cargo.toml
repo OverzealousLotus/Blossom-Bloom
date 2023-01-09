@@ -17,5 +17,9 @@ path = "src/options.rs"
 name = "boxes"
 path = "src/boxes.rs"
 
+[[bin]]
+name = "generics"
+path = "src/generics.rs"
+
 
 [dependencies]
